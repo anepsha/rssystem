@@ -1,0 +1,16 @@
+<h2 class="page-header">Edit department</h2>
+<div class="panel panel-default">
+    <div class="panel-body" id="edit-product">
+        <div class="col-lg-12">
+            <form action="/departments/update_department" method="post">
+                <div class="form-group">
+                    <input type="hidden" value="{{department.id}}" name="departmentId"/>
+                    <label for="departmentName">Department Name</label>
+                    <input type="text" name="departmentName" id="departmentName" value="{{department.name}}" class="form-control"  required/>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/departments/add_department">Back To List</a>
+            </form>
+        </div>
+    </div>
+</div>

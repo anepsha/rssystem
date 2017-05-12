@@ -1,0 +1,12 @@
+<h2 class="page-header">Departments</h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-lg-12">
+            {{#each departments}}
+            <ul>
+                <li><a href="/products/view_products/{{_id}}?">{{name}}</a></li>
+            </ul>
+            {{/each}}
+        </div>
+    </div>
+</div>

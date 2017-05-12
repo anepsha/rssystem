@@ -1,0 +1,101 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+
+.navbar-simple .brand {
+ 	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.navbar-simple .navbar-inner {
+	background: #fff;
+	filter: none !important;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.navbar-simple .navbar-inner .nav {
+	float: right;
+}
+.navbar-simple .navbar-inner .nav li a {
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #777;
+	font-size: 13px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: 600;
+}
+.navbar-simple .navbar-inner .nav li a:hover {
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #bf3604;
+}
+.navbar-simple .navbar-inner .nav li.active a {
+	color: #bf3604;
+}

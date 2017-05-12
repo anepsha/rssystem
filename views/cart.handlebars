@@ -1,0 +1,40 @@
+﻿<h2 class="page-header">Cart</h2>
+{{#if products}}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-4">
+                <strong>Product Name</strong>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <strong>Department Name</strong>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <strong>Quantity</strong>
+            </div>
+        </div>
+        <hr />
+        {{#each products}}
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-4">
+                <strong>{{this.item.name}}</strong>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                {{this.item.departmentName}}
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <input type="number" id="{{id}}" required value={{this.qty}} />
+            </div>
+        </div>
+        <hr />
+        {{/each}}
+        <button type="submit">Submit</button>
+    </div>
+</div>
+{{else}}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>Cart is empty</p>
+    </div>
+</div>
+{{/if}}

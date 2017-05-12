@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    $('edit-product').ready(
+        function() {
+            var defaultdDepartmentName = $('#productDepartmentName').val();
+
+            $("select option").filter(function () {
+                return $(this).text() == defaultdDepartmentName;
+            }).attr('selected', true);
+        }
+    );
+</script>
+
+<h2 class="page-header">Edit product</h2>
+<div class="panel panel-default">
+    <div class="panel-body" id="edit-product">
+        <div class="col-lg-12">
+            <form action="/products/update_product" method="post">
+                <div class="form-group">
+                    <input type="hidden" value="{{product.id}}" name="productId"/>
+                    <label for="productName">Product Name</label>
+                    <input type="text" name="productName" class="form-control" value="{{product.name}}" required/>
+                </div>
+                <div class="form-group">
+                    <label for="departmentName">Department Name</label>
+                    <input type="hidden" value="{{product.departmentName}}" id="productDepartmentName" />
+                    <select class="form-control" name="departmentList">
+                        {{#each departments}}
+                        <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription" class="input-group">Product Description (Optional)</label>
+                    <textarea class="form-control" name="productDescription" >{{product.description}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/products/add_product">Back To List</a>
+            </form>
+        </div>
+    </div>
+</div>
