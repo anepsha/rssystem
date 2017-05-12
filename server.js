@@ -11,10 +11,11 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var connectMongo = require('connect-mongo');
+var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/rssystem';
 
 var MongoStore = connectMongo(session);
 
-mongoose.connect('mongodb://localhost/rssystem');
+mongoose.connect(mongoUri);
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
