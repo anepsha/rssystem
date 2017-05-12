@@ -27,5 +27,13 @@
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"
-  }
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anepsha/rssystem"
+  },
+  "license": "MIT"
 }
