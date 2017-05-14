@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var connectMongo = require('connect-mongo');
-var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/rssystem';
+var mongoUri = "mongodb://admin:admin@ds139781.mlab.com:39781/rssystem";
 
 var MongoStore = connectMongo(session);
 
